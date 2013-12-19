@@ -1,0 +1,31 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+# Sample debian/rules that uses debhelper.
+# This file was originally written by Joey Hess and Craig Small.
+# As a special exception, when this file is copied by dh-make into a
+# dh-make output file, you may use that output file without restriction.
+# This special exception was added by Craig Small in version 0.37 of dh-make.
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+DEB_HOST_MULTIARCH ?= $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
+%:
+	dh $@ --with quilt
+
+override_dh_auto_build:
+	dh_auto_build -D bindings/java
+
+
+override_dh_auto_clean:
+	dh_auto_clean -D bindings/java
+
+override_dh_install:
+	for file in debian/*.in; do sed -e"s,\$${DEB_HOST_MULTIARCH},$(DEB_HOST_MULTIARCH),g" $${file} > $${file%%.in}; done
+	dh_install
+
+override_dh_clean:
+	for file in debian/*.in; do rm -f $${file%%.in}; done
+	dh_clean
+

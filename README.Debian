@@ -1,0 +1,6 @@
+sigar for Debian
+----------------
+
+First try at packaging a java library with dependant c library.
+
+ -- Andreas Wirooks <andreas.wirooks@1und1.de>  Thu, 12 Dec 2013 09:45:37 +0100

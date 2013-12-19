@@ -1,0 +1,34 @@
+Source: sigar
+Priority: optional
+Maintainer: Andreas Wirooks <andreas.wirooks@1und1.de>
+Build-Depends: debhelper (>= 8.0.0), quilt, gcc, openjdk-7-jdk, ant
+Standards-Version: 3.9.3
+Section: libs
+Homepage: http://sigar.hyperic.com/
+#Vcs-Git: git://git.debian.org/collab-maint/sigar.git
+#Vcs-Browser: http://git.debian.org/?p=collab-maint/sigar.git;a=summary
+
+Package: sigar-java-jni
+Section: libs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libc6, openjdk-7-jre-headless | openjdk-7-jre
+Description: System Information Gatherer And Reporter
+ One API to access system information regardless of the underlying platform
+ .
+ Hyperic's System Information Gatherer (SIGAR) is a cross-platform API for 
+ collecting software inventory data. SIGAR is core of HQ's auto-discovery 
+ functionality, and you can use it to extend auto-discovery behavior.
+ .
+ SIGAR includes support for Linux, FreeBSD, Windows, Solaris, AIX, HP-UX and 
+ Mac OSX across a variety of versions and architectures. Users of the SIGAR 
+ API are given portable access to inventory and monitoring data including:
+ .
+  * System memory, swap, cpu, load average, uptime, logins
+  * Per-process memory, cpu, credential info, state, arguments, environment, 
+    open files
+  * File system detection and metrics
+  * Network interface detection, configuration information and metrics
+  * Network route and connection tables
+ .
+ This is java binding for the core API, which is implemented in pure C.
+

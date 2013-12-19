@@ -1,0 +1,4 @@
+sigar for Debian
+----------------
+
+The source contains a c library and many bindings to different languages. We only need the c library and the java binding.

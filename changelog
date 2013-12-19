@@ -1,0 +1,5 @@
+sigar (1.6.4-1) unreleased; urgency=low
+
+  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+
+ -- Andreas Wirooks <andreas.wirooks@1und1.de>  Thu, 12 Dec 2013 09:45:37 +0100
