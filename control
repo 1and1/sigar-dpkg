@@ -1,7 +1,7 @@
 Source: sigar
 Priority: optional
 Maintainer: Andreas Wirooks <andreas.wirooks@1und1.de>
-Build-Depends: debhelper (>= 8.0.0), quilt, gcc, openjdk-7-jdk, ant
+Build-Depends: debhelper (>= 8.0.0), quilt, gcc, oracle-java7-jdk | openjdk-7-jdk, ant
 Standards-Version: 3.9.3
 Section: libs
 Homepage: http://sigar.hyperic.com/
@@ -12,7 +12,7 @@ Package: libsigar-java
 Section: libs
 Architecture: all
 Multi-Arch: foreign
-Depends: ${misc:Depends}, openjdk-7-jre-headless | openjdk-7-jre
+Depends: ${misc:Depends}, oracle-java7-jre | openjdk-7-jre-headless | openjdk-7-jre
 Description: System Information Gatherer And Reporter
  One API to access system information regardless of the underlying platform
  .
