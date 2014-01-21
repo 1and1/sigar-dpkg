@@ -1,11 +1,20 @@
+sigar (1.6.4-3) wheezy; urgency=low
+
+  * Removed dependencies to libc6 and gcc because essential and build-essential
+  * Set correct distribution
+  * Added lintian overrides for hardening because it is not verified or active
+    in actual ant build process
+
+ -- Andreas Wirooks <andreas.wirooks@1und1.de>  Tue, 21 Jan 2014 16:00:00 +0100
+
 sigar (1.6.4-2) unreleased; urgency=low
 
-  * Oracle Java dependancy added
+  * Oracle Java dependency added
 
  -- Andreas Wirooks <andreas.wirooks@1und1.de>  Fri, 17 Jan 2014 15:26:26 +0100
 
 sigar (1.6.4-1) unreleased; urgency=low
 
-  * Initial release (Closes: #nnnn)  <nnnn is the bug number of your ITP>
+  * Initial release
 
  -- Andreas Wirooks <andreas.wirooks@1und1.de>  Thu, 12 Dec 2013 09:45:37 +0100

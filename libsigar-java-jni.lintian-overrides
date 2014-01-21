@@ -1,0 +1,2 @@
+libsigar-java-jni: hardening-no-relro usr/lib/x86_64-linux-gnu/jni/libsigar-amd64-linux.so
+libsigar-java-jni: hardening-no-fortify-functions usr/lib/x86_64-linux-gnu/jni/libsigar-amd64-linux.so

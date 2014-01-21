@@ -1,7 +1,7 @@
 Source: sigar
 Priority: optional
 Maintainer: Andreas Wirooks <andreas.wirooks@1und1.de>
-Build-Depends: debhelper (>= 8.0.0), quilt, gcc, oracle-java7-jdk | openjdk-7-jdk, ant
+Build-Depends: debhelper (>= 8.0.0), quilt, oracle-java7-jdk | openjdk-7-jdk, ant
 Standards-Version: 3.9.3
 Section: libs
 Homepage: http://sigar.hyperic.com/
@@ -9,7 +9,7 @@ Homepage: http://sigar.hyperic.com/
 #Vcs-Browser: http://git.debian.org/?p=collab-maint/sigar.git;a=summary
 
 Package: libsigar-java
-Section: libs
+Section: java
 Architecture: all
 Multi-Arch: foreign
 Depends: ${misc:Depends}, oracle-java7-jre | openjdk-7-jre-headless | openjdk-7-jre
@@ -37,7 +37,7 @@ Package: libsigar-java-jni
 Section: libs
 Architecture: any
 Multi-Arch: same
-Depends: ${shlibs:Depends}, ${misc:Depends}, libc6
+Depends: ${shlibs:Depends}, ${misc:Depends}
 Description: System Information Gatherer And Reporter
  One API to access system information regardless of the underlying platform
  .
